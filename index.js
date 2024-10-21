@@ -12,7 +12,7 @@ const cookieParser = require("cookie-parser");
 const path = require("path");
 require("dotenv").config();
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 4003;
 
 app.use(cors());
 // Serve only public assets (CSS, etc.)
