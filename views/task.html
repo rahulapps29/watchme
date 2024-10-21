@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta desc="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <!-- normalize -->
+    <link rel="stylesheet" href="./normalize.css" />
+    <!-- main  -->
+    <link rel="stylesheet" href="./main.css" />
+
+    <title>Edit Entry</title>
+  </head>
+  <body>
+    <div class="container">
+      <form class="single-task-form">
+        <h4>Edit Entry</h4>
+
+        <div class="form-control">
+          <label>Task ID</label>
+          <p class="task-edit-id"></p>
+        </div>
+
+        <div class="form-control">
+          <label for="">Name</label>
+          <input id="Name" type="text" name="name" class="task-edit-name" />
+        </div>
+        <div class="form-control">
+          <label for="date">Date & Time:</label>
+          <input
+            type="datetime-local"
+            id="date"
+            name="date"
+            value="<%= event.date.toISOString().slice(0,16) %>"
+            class="task-edit-dateTime"
+          />
+        </div>
+        <div class="form-control">
+          <label for="desc">Meal</label>
+          <input id="Meal" type="text" name="meal" class="task-edit-meal" />
+        </div>
+        <div class="form-control">
+          <label for="Comment">Comment</label>
+          <input
+            id="Comment"
+            type="text"
+            name="comment"
+            class="task-edit-comment"
+          />
+        </div>
+        <div class="form-control">
+          <label for="Sugar">Sugar</label>
+          <input id="Sugar" type="text" name="sugar" class="task-edit-sugar" />
+        </div>
+        <div class="form-control">
+          <label for="Insulin">Insulin</label>
+          <input
+            id="Insulin"
+            type="text"
+            name="insulin"
+            class="task-edit-insulin"
+          />
+        </div>
+        <div class="form-control">
+          <label for="Lantus">Lantus</label>
+          <input
+            id="Lantus"
+            type="text"
+            name="lantus"
+            class="task-edit-lantus"
+          />
+        </div>
+
+        <button type="submit" class="block btn task-edit-btn">edit</button>
+        <div class="form-alert"></div>
+      </form>
+      <a href="protected" class="btn back-link">back to tasks</a>
+    </div>
+    <!-- axios -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- js -->
+    <script src="./edit-task.js"></script>
+  </body>
+</html>

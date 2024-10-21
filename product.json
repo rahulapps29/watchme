@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Dalip",
+    "meal": "Sabudana papita",
+    "comment": "before breakfast",
+    "sugar": 134,
+    "insulin": null,
+    "lantus": null,
+    "tDate": "2024-10-20T04:09:00.000Z"
+  },
+  {
+    "name": "Dalip",
+    "meal": "Papita",
+    "comment": "before dinner",
+    "sugar": 225,
+    "insulin": null,
+    "lantus": 14,
+    "tDate": "2024-10-19T15:30:00.000Z"
+  },
+  {
+    "name": "Dalip",
+    "meal": "Sabudana papita",
+    "comment": "before breakfast",
+    "sugar": 128,
+    "insulin": null,
+    "lantus": 0,
+    "tDate": "2024-10-19T03:12:00.000Z"
+  },
+  {
+    "name": "Dalip",
+    "meal": "Daliya",
+    "comment": "before dinner",
+    "sugar": 251,
+    "insulin": 14,
+    "lantus": 0,
+    "tDate": "2024-10-18T17:50:36.442Z"
+  }
+]

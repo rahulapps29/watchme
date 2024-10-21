@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta desc="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- normalize css -->
+    <link rel="stylesheet" href="./normalize.css" />
+    <!-- main css -->
+    <link rel="stylesheet" href="./main.css" />
+    <title>Medicine Sheet</title>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="logout-form child">
+        <form class="mera" action="/logout" method="POST">
+          <button type="submit" id="logoutButton">Logout</button>
+        </form>
+      </div>
+      <form class="task-form">
+        <h4>Medicine Sheet</h4>
+
+        <div class="form-control">
+          <input type="text" name="name" class="task-name" placeholder="Name" />
+        </div>
+        <div class="form-control">
+          <input
+            type="text"
+            name="meal"
+            class="task-meal"
+            placeholder="Meal: Dal/Fish"
+          />
+        </div>
+
+        <div class="form-control">
+          <input
+            type="datetime-local"
+            id="date"
+            name="date"
+            value="<%= event.date.toISOString().slice(0,16) %>"
+            class="task-edit-dateTime"
+          />
+        </div>
+
+        <div class="form-control">
+          <input
+            type="text"
+            name="comment"
+            class="task-comment"
+            placeholder="Time: Before breakfast/lunch/dinner"
+          />
+        </div>
+
+        <div class="form-control">
+          <input
+            type="text"
+            name="sugar"
+            class="task-sugar"
+            placeholder="Sugar in mg/dL"
+          />
+        </div>
+        <div class="form-control input-container">
+          <input
+            type="text"
+            name="insulin"
+            class="task-insulin"
+            placeholder="Insulin in units (.01 mL)"
+          />
+
+          <input
+            type="text"
+            name="lantus"
+            class="task-lantus"
+            placeholder="Lantus in units (.01 mL)"
+          />
+        </div>
+
+        <div class="form-control">
+          <button type="submit" class="btn submit-btn">submit</button>
+        </div>
+        <div class="form-alert"></div>
+      </form>
+      <section class="tasks-container">
+        <p class="loading-text">Loading...</p>
+        <div class="tasks"></div>
+      </section>
+      <!-- axios -->
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+      <script src="./browser-app.js"></script>
+    </div>
+  </body>
+</html>
